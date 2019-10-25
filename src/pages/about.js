@@ -12,10 +12,10 @@ class AboutPage extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="About Page" description={node.frontmatter.description}/>
         <article>
-          <h1>{node.title}</h1>
+          <h1>{node.frontmatter.title}</h1>
           <section dangerouslySetInnerHTML={{ __html: node.html}}/>
         </article>
-      </Layout>
+      </Layout> 
     )
   }
 }
@@ -33,9 +33,6 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
-          fields {
-            slug
-          }
           html
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
@@ -46,4 +43,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+` 
