@@ -6,6 +6,10 @@ module.exports = {
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `r8tran`,
+      github: `r-tran`,
+      dev: `rtran`,
+      linkedin: `r-tran-021`,
+      email: `rayt579@yahoo.com`,
     },
   },
   plugins: [
