@@ -1,9 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import style from "./home-css-modules.module.css"
+import SocialLinks from "../components/social"
+
 
 class BlogIndex extends React.Component {
   render() {
@@ -12,8 +13,12 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
+        <SEO title="Pythons and Penguins Home" />
+        <div id="home-center" className={style.content}>
+          <h1 id="home-title">Ray Tran</h1>
+          <p id="home-subtitle">Sharing my journey in DevOps</p>
+          <SocialLinks/>
+        </div>
       </Layout>
     )
   }
