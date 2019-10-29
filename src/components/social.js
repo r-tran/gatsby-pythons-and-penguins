@@ -12,7 +12,7 @@ const Icon = ({ href, icon }) => (
   </a>
 );
 
-const SocialLinks= () => {
+const SocialLinks = () => {
     const data = useStaticQuery(graphql`
       query {
         site {

@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { rhythm } from "../utils/typography"
+import DarkModeToggler from "./darkModeToggler"
 
 class Layout extends React.Component {
   render() {
@@ -36,25 +37,34 @@ class Layout extends React.Component {
     return (
       <div
         style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          backgroundColor: 'var(--bg)',
+          color: 'var(--textNormal)',
+          transition: 'color 0.2s ease-out, background 0.2s ease-out',
         }}
       >
-        <header>
-          <ul style={{ listStyle: `none`, float: `right` }}>
-            <ListLink to="/about/">About</ListLink>
-            <ListLink to="/posts/">Blog</ListLink>
-          </ul>
-          {header}
-        </header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <div
+          style={{
+            marginLeft: `auto`,
+            marginRight: `auto`,
+            maxWidth: rhythm(24),
+            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          }}
+        >
+          <header>
+            <ul style={{ listStyle: `none`, float: `right` }}>
+              <ListLink to="/about/">About</ListLink>
+              <ListLink to="/posts/">Blog</ListLink>
+              <DarkModeToggler/>
+            </ul>
+            {header}
+          </header>
+          <main>{children}</main>
+          <footer>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </footer>
+        </div>
       </div>
     )
   }

@@ -5,7 +5,6 @@ import SEO from "../components/seo"
 import style from "./home-css-modules.module.css"
 import SocialLinks from "../components/social"
 
-
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
