@@ -51,7 +51,10 @@ class Layout extends React.Component {
           }}
         >
           <header>
-            <ul style={{ listStyle: `none`, float: `right` }}>
+            <ul style={{ 
+              float: `right`,
+              display: `flex`,
+             }}>
               <ListLink to="/about/">About</ListLink>
               <ListLink to="/posts/">Blog</ListLink>
               <DarkModeToggler/>
