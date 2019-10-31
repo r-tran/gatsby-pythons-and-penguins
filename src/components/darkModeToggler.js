@@ -9,11 +9,11 @@ const DarkModeToggler= () => {
         {({ theme, toggleTheme }) => (
           <label>
             <Toggle
-              defaultChecked={theme === 'dark'}
+              checked={theme === 'dark'}
               className='custom-classname'
               icons={false}
               onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}/>
-          </label>
+          </label> 
         )}
       </ThemeToggler>
     )
