@@ -15,6 +15,35 @@ But my colleague Sebastian [kept](https://mobile.twitter.com/sebmarkbage/status/
 It turned out that algebraic effects are a cool concept and not as scary as I thought from those pdfs. **If you’re just using React, you don’t need to know anything about them — but if you’re feeling curious, like I was, read on.**
 
 *(Disclaimer: I’m not a programming language researcher, and might have messed something up in my explanation. I am not an authority on this topic so let me know!)*
+### Here is my coin change problem
+Create a file named `solution.py`
+```python
+class Solution(object):
+    def coinChange(self, coins, amount):
+        """
+        :type coins: List[int]
+        :type amount: int
+        :rtype: int
+        """
+        amounts = [0] * (amount + 1)
+        for current_amount in range(1, len(amounts)):
+            min_coins_at_current = float('inf')
+            for coin in coins:
+                if current_amount >= coin:
+                    min_coins_at_current = min(min_coins_at_current, amounts[current_amount - coin] + 1)
+
+            amounts[current_amount] = min_coins_at_current
+
+        return amounts[amount] if amounts[amount] != float('inf') else -1
+sol = Solution()
+print(sol.coinChange([1,2], 4))
+print(sol.coinChange([1, 3, 5], 6))
+print(sol.coinChange([3, 5], 2))
+```
+Then run your example:
+```bash{promptUser: ray}
+python3 solution.py && echo 'OK'
+```
 
 ### Not Production Ready Yet
 
@@ -56,6 +85,7 @@ try {
   console.log("Oops, that didn't work out: ", err);
 }
 ```
+I can highlight `css+some-class { background-color: red }` with CSS syntax.
 
 We `throw` inside `getName`, but it “bubbles” up right through `makeFriends` to the closest `catch` block. This is an important property of `try / catch`. **Things in the middle don’t need to concern themselves with error handling.**
 

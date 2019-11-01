@@ -30,13 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create blog posts pages.
   const posts = result.data.allMarkdownRemark.edges.filter(({ node }) => node.frontmatter.title !== 'About')
-  console.log(`The length is ${posts.length}`)
-  posts.forEach(({ node }) => {
-    console.log(node.fields.slug)
-  })
-
   posts.forEach((post, index) => {
-    //console.log(`post.node.fields.slug: ${post.node.fields.slug}`)
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
 
@@ -57,7 +51,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
-    console.log(`Create ${value}`)
     createNodeField({
       name: `slug`,
       node,
