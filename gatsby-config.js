@@ -66,13 +66,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Pythons and Penguins`,
+        short_name: `Pythons and Penguins`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#ffa7c4`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/penguin-icon.png`,
+        theme_color_in_head: false,
       },
     },
     `gatsby-plugin-offline`,
@@ -83,6 +84,5 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-plugin-dark-mode`,
   ],
 }
