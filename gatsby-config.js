@@ -70,7 +70,7 @@ module.exports = {
         short_name: `Pythons and Penguins`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#ffa7c4`,
+        theme_color: `#4b8bbe`,
         display: `minimal-ui`,
         icon: `content/assets/penguin-icon.png`,
         theme_color_in_head: false,
