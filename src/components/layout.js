@@ -2,8 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import Toggle from './Toggle'
 import { rhythm } from "../utils/typography"
-import sun from '../assets/sun.png';
-import moon from '../assets/moon.png';
 
 class Layout extends React.Component {
   state = {
@@ -67,40 +65,20 @@ class Layout extends React.Component {
              }}>
               <ListLink to="/about/">About</ListLink>
               <ListLink to="/posts/">Blog</ListLink>
+              {this.state.theme !== null ? (
+                <Toggle
+                  checked={this.state.theme === 'dark'}
+                  onChange={e =>
+                    window.__setPreferredTheme(
+                      e.target.checked ? 'dark' : 'light'
+                    )
+                  }
+                />
+              ) : (
+                <div style={{ height: '24px' }} />
+              )}
             </ul>
             {header}
-            {this.state.theme !== null ? (
-              <Toggle
-                icons={{
-                  checked: (
-                    <img
-                      src={moon}
-                      width="16"
-                      height="16"
-                      role="presentation"
-                      style={{ pointerEvents: 'none' }}
-                    />
-                  ),
-                  unchecked: (
-                    <img
-                      src={sun}
-                      width="16"
-                      height="16"
-                      role="presentation"
-                      style={{ pointerEvents: 'none' }}
-                    />
-                  ),
-                }}
-                checked={this.state.theme === 'dark'}
-                onChange={e =>
-                  window.__setPreferredTheme(
-                    e.target.checked ? 'dark' : 'light'
-                  )
-                }
-              />
-            ) : (
-              <div style={{ height: '24px' }} />
-            )}
           </header>
           <main>{children}</main>
           <footer>
