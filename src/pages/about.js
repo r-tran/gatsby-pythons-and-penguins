@@ -10,7 +10,7 @@ class AboutPage extends React.Component {
     const node = data.allMarkdownRemark.edges[0].node
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="About Page" description={node.frontmatter.description}/>
+        <SEO title="About" description={node.frontmatter.description}/>
         <article>
           <h1>{node.frontmatter.title}</h1>
           <section dangerouslySetInnerHTML={{ __html: node.html}}/>
