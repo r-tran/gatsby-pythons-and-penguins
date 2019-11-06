@@ -6,6 +6,10 @@ const Icon = ({ href, icon, ariaLabel, }) => (
   <a
     href={href}
     aria-label={ariaLabel}
+    style={{
+      boxShadow: `none`,
+      textDecoration: `none`,
+    }}
   >
     <span className="fa-layers fa-fw fa-2x">
       <FontAwesomeIcon icon={icon} />

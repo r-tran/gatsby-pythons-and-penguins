@@ -38,7 +38,12 @@ class Layout extends React.Component {
 
     const ListLink = props => (
       <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-        <Link to={props.to}>{props.children}</Link>
+        <Link 
+        style={{
+          boxShadow: `none`,
+          textDecoration: `none`,
+        }}
+        to={props.to}>{props.children}</Link>
       </li>
     )
 
