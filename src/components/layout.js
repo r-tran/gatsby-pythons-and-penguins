@@ -37,7 +37,12 @@ class Layout extends React.Component {
     )
 
     const ListLink = props => (
-      <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+      <li style={{ 
+        display: `inline-block`, 
+        marginRight: `1rem` , 
+        fontFamily: `100%/1.75 'Merriweather','Georgia',serif`, 
+        fontWeight:`700`, 
+        fontKerning: `normal`}}>
         <Link 
         style={{
           boxShadow: `none`,
@@ -52,8 +57,7 @@ class Layout extends React.Component {
         style={{
           backgroundColor: 'var(--bg)',
           color: 'var(--textNormal)',
-          transition: 'color 0.2s ease-out, background 0.2s ease-out',
-        }}
+          transition: 'color 0.2s ease-out, background 0.2s ease-out', }}
       >
         <div
           style={{

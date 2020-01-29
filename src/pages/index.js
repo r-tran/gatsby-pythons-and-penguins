@@ -14,8 +14,8 @@ class BlogIndex extends React.Component {
       <Layout title={siteTitle}>
         <SEO title="Home" />
         <div id="home-center" className={style.content}>
-          <h1 id="home-title">Ray Tran</h1>
-          <p id="home-subtitle">Sharing my journey in DevOps</p>
+          <h1 id="home-title"> Ray Tran </h1>
+          <p id="home-subtitle">☁️ Tinkering with all things DevOps and distributed systems ☁️</p>
           <SocialLinks/>
         </div>
       </Layout>
