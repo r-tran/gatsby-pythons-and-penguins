@@ -10,8 +10,8 @@ Outside of tech, you'll find me recreating recipes à la the Bon Appétit test k
 ![Picture of Ray in Zion National Park](./profile.jpg)
 
 ## What is Pythons and Penguins?
-Pythons and Penguins is a blog where I can share everything that I've been learning about distributed systems, Python programming, Linux, and general software engineering. 
+Pythons and Penguins is a blog to share everything that I've been learning about systems, software engineering, computer science fundamentals, and tech culture. 
 
-As I've recently switched over to DevOps from traditional software app development, I have a lot to learn. I believe that teaching is the one of the best ways to reinforce knowledge, and I hope that my blog provides value for anyone who is starting out or interested in DevOps.
+I believe that teaching is the one of the best ways to reinforce my own knowledge, and I hope that this blog provides value for anyone who is starting out or interested in DevOps.
 
 Here's to building cool things--happy coding!
